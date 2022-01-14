@@ -35,10 +35,10 @@ const Question = () => {
   const checkCount = () => {
     if (count >= 10) toggleShowWin('flex')
   }
-  const pickRandom = () => {
+  const pickRandom = async () => {
     const random = (Math.floor(Math.random() * question.length))
     if (count < 10) {
-      setPickQuestion(question[random])
+      await setPickQuestion(question[random])
       question.splice(random, 1)
       checkCount()
     }
