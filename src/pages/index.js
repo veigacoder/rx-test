@@ -3,12 +3,12 @@ import {
   Card,
   CardHeader,
   CardRow
-} from '../../elements/card'
+} from '../elements/card'
 import {
   ActionButton,
   CloseButton,
   CheckButton
-} from '../../elements/buttons'
+} from '../elements/buttons'
 import {
   IoIosPlay,
   IoIosClose,
@@ -22,9 +22,9 @@ import {
   ModalHeader,
   ModalInput,
   ModalSpan
-} from '../../elements/modal'
-import { Main } from '../../elements/main-frame'
-import { MainRow } from '../../elements/layout'
+} from '../elements/modal'
+import { Main } from '../elements/main-frame'
+import { MainRow } from '../elements/layout'
 import { useRouter } from 'next/router'
 
 const Home = () => {
@@ -40,6 +40,7 @@ const Home = () => {
   const sendMessage = () => {
     setMessage('Nomes precisam de pelo menos 3 letras')
   }
+
   return (
     <Main>
       <MainRow>

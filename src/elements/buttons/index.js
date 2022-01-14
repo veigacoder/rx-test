@@ -30,7 +30,7 @@ width: max-content;
 height: max-content;
 display:flex;
 justify-content: center;
-font-size: 64px;
+font-size: 36px;
 align-items: center;
 transition: all 250ms cubic-bezier(1,.03,.56,.89);
 :hover {
@@ -46,11 +46,45 @@ width: max-content;
 height: max-content;
 display:flex;
 justify-content: center;
-font-size: 64px;
+font-size: 48px;
 align-items: center;
 transition: all 250ms cubic-bezier(1,.03,.56,.89);
 :hover {
   background-color: #28D634;
+  color: #fff;
+}
+`
+export const QuestionButton = styled.div`
+border-radius: 8px;
+cursor: pointer;
+color: #2988D6;
+min-width: max-content;
+height: max-content;
+display:flex;
+padding: 10px;
+justify-content: center;
+font-size: 24px;
+align-items: center;
+transition: all 250ms cubic-bezier(1,.03,.56,.89);
+:hover {
+  background-color: #2988D6;
+  color: #fff;
+}
+`
+export const EndGameButtons = styled.div`
+border-radius: 8px;
+cursor: pointer;
+color: #1C1C1C;
+width: max-content;
+height: max-content;
+display:flex;
+justify-content: center;
+font-size: 16px;
+padding: 5px;
+align-items: center;
+transition: all 250ms cubic-bezier(1,.03,.56,.89);
+:hover {
+  background-color: #FA3434;
   color: #fff;
 }
 `

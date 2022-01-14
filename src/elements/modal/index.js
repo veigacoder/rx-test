@@ -17,32 +17,33 @@ export const ModalContent = styled.div`
 width: 70%;
 background-color: #fff;
 border-radius: 8px;
-
 `
 export const ModalBody = styled.div`
-padding: 10px;
 width: 100%;
 min-width: max-content;
 display: flex;
 justify-content: center;
 align-items: center;
+flex-direction: column;
+margin: 5px;
 `
 
 export const ModalFooter = styled.div`
-padding: 5px;
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
+margin: 5px;
 `
 
 export const ModalHeader = styled.div`
-padding: 10px;
+font-family: 'Lato', sans-serif;
 display: flex;
 justify-content: space-between;
 align-items: center;
 font-size: 24px;
 font-weight: 800;
+margin: 5px;
 `
 
 export const ModalInput = styled.input`

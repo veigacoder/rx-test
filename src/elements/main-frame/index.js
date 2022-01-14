@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 
 export const Main = styled.div`
-min-height: 100%;
-min-width: 100%;
+min-height: max-content;
+min-width: max-content;
+width: 100%;
+height: 100%;
 position: absolute;
 background-color: #3C3C3C;
 top: 0;
