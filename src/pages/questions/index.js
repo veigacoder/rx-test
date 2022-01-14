@@ -26,36 +26,34 @@ import { useRouter } from 'next/router'
 import { question } from '../../questions'
 const Question = () => {
   const [show, toggleShow] = useState('none')
+  const [win, toggleShowWin] = useState('none')
   const [pickQuestion, setPickQuestion] = useState([])
   const [questionNumber, setQuestionNumber] = useState(0)
   const [count, setCount] = useState(0)
   const router = useRouter()
 
+  const checkCount = () => {
+    if (count === 10) toggleShowWin('flex')
+  }
   const pickRandom = async () => {
-    const used = []
     const random = (Math.floor(Math.random() * question.length))
-    if (!used.includes(random)) {
+    if (count < 10) {
       setPickQuestion(question[random])
-      used.push(random)
-      console.log(used)
-    } else {
-      setPickQuestion(question[random + 1])
+      question.splice(random, 1)
+      checkCount()
     }
   }
+
   const sendAnswer = async (a) => {
     if (pickQuestion.answer === a) {
       pickRandom()
       setCount(count + 1)
       setQuestionNumber(questionNumber + 1)
-    } else {
+    }
+    if (pickQuestion.answer !== a) {
       toggleShow('flex')
     }
-  }
-  const restartGame = () => {
-    setCount(0)
-    setQuestionNumber(1)
-    toggleShow('none')
-    pickRandom()
+    checkCount()
   }
 
   useEffect(() => {
@@ -68,7 +66,7 @@ const Question = () => {
       <MainRow>
         <Card>
           <CardRow>
-            <CardHeader>
+            <CardHeader onClick={() => setCount(count + 1)}>
               PERGUNTA {questionNumber}
             </CardHeader>
             <CardRow>
@@ -114,10 +112,26 @@ const Question = () => {
                   <IoIosFlag /> DESISTIR
                 </EndGameButtons>
 
-                <EndGameButtons onClick={() => restartGame()}>
+                <EndGameButtons onClick={() => router.reload()}>
                   <IoIosRefresh /> REINICIAR
                 </EndGameButtons>
 
+              </ModalBody>
+            </ModalContent>
+          </Modal>
+          <Modal show={win}>
+            <ModalContent>
+              <ModalHeader>
+                VOCÊ VENCEU
+              </ModalHeader>
+              <ModalBody>
+                <EndGameButtons onClick={() => router.push('/')}>
+                  <IoIosFlag /> SAIR
+                </EndGameButtons>
+
+                <EndGameButtons onClick={() => router.reload()}>
+                  <IoIosRefresh /> REFAZER
+                </EndGameButtons>
               </ModalBody>
             </ModalContent>
           </Modal>
