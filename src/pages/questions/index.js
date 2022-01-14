@@ -33,9 +33,9 @@ const Question = () => {
   const router = useRouter()
 
   const checkCount = () => {
-    if (count === 10) toggleShowWin('flex')
+    if (count >= 10) toggleShowWin('flex')
   }
-  const pickRandom =  () => {
+  const pickRandom = () => {
     const random = (Math.floor(Math.random() * question.length))
     if (count < 10) {
       setPickQuestion(question[random])
