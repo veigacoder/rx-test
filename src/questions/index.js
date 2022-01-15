@@ -128,5 +128,18 @@ export const question = [
           d: 'Coríndon'
         }
       ]
+  },
+  {
+    question: 'Claridade no céu entre a noite e o nascer do Sol',
+    answer: 'Diamante',
+    alternatives:
+      [
+        {
+          a: 'Anoitecer',
+          b: 'Crepúsculo',
+          c: 'Entardecer',
+          d: 'Madrugar'
+        }
+      ]
   }
 ]

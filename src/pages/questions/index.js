@@ -32,16 +32,12 @@ const Question = () => {
   const [count, setCount] = useState(0)
   const router = useRouter()
 
-  const checkCount = () => {
-    if (count >= 10) toggleShowWin('flex')
-  }
   const pickRandom = async () => {
     const random = (Math.floor(Math.random() * question.length))
-    if (count < 10) {
+    if (count <= 9) {
       await setPickQuestion(question[random])
       question.splice(random, 1)
-      checkCount()
-    }
+    } else return false
   }
 
   const sendAnswer = async (a) => {
@@ -53,7 +49,9 @@ const Question = () => {
     if (pickQuestion.answer !== a) {
       toggleShow('flex')
     }
-    checkCount()
+    if (pickQuestion.answer === a && count + 1 === 10) {
+      toggleShowWin('flex')
+    }
   }
 
   useEffect(() => {
