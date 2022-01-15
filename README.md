@@ -35,3 +35,7 @@ docker run -p 3001:3000 rx-test
 
 ### Acessando o app  
 ### http://localhost:3001
+
+
+### Deploy feito também em 
+https://rx-test.vercel.app
