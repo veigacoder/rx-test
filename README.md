@@ -1,36 +1,37 @@
 # RX PRO TESTE TÉCNICO DE FRONT END 
  
 ## Ferramentas utilizadas 
+- Docker
 - React
 - React Icons
 - NextJS
 - Styled Components
 
-## Como executar o projeto
+## PARA EXECUTAR O PROJETO
+### Tenha certeza de ter:
+- Docker instalado na sua máquina
+- Um terminal de comandos 
+- Um terminal git
 
-## Tenha certeza de ter Docker instalado na sua máquina
-##### se não, acesse https://docs.docker.com/get-docker/
-
-
-### Clone o repositório através de um terminal git com 
+### Clonando o repositório
 ```
 git clone https://github.com/veigacoder/rx-test.git
 ```
 
-### Após o cloning, acesse o diretório do projeto por um terminal de comandos
+### Acessando o diretório 
 ```
 cd .\rx-test\
 ```
 
-### Monte a imagem Docker
+### Montando a imagem Docker
 ```
 docker build -t rx-test .
 ```
 
-### Execute o container Docker
+### Executando o container Docker
 ```
 docker run -p 3001:3000 rx-test
 ```
 
-### Acesse o app em 
-## http://localhost:3001
+### Acessando o app  
+### http://localhost:3001
