@@ -37,7 +37,7 @@ const Question = () => {
     if (count <= 9) {
       await setPickQuestion(question[random])
       question.splice(random, 1)
-    } else return false
+    }
   }
 
   const sendAnswer = async (a) => {
@@ -49,7 +49,7 @@ const Question = () => {
     if (pickQuestion.answer !== a) {
       toggleShow('flex')
     }
-    if (pickQuestion.answer === a && count + 1 === 10) {
+    if (pickQuestion.answer === a && count === 10) {
       toggleShowWin('flex')
     }
   }

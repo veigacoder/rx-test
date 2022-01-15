@@ -131,7 +131,7 @@ export const question = [
   },
   {
     question: 'Claridade no céu entre a noite e o nascer do Sol',
-    answer: 'Diamante',
+    answer: 'Crepúsculo',
     alternatives:
       [
         {
