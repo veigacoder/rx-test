@@ -5,9 +5,9 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/xHYLi1IVxmgdTswYOIbap/_buildManifest.js",
-    "static/xHYLi1IVxmgdTswYOIbap/_ssgManifest.js",
-    "static/xHYLi1IVxmgdTswYOIbap/_middlewareManifest.js"
+    "static/AJ8Mpwa8701fr2E9x6RqQ/_buildManifest.js",
+    "static/AJ8Mpwa8701fr2E9x6RqQ/_ssgManifest.js",
+    "static/AJ8Mpwa8701fr2E9x6RqQ/_middlewareManifest.js"
   ],
   "pages": {
     "/": [
@@ -36,7 +36,7 @@
       "static/chunks/main-e47bb435dabe4202.js",
       "static/chunks/95b64a6e-b2308adb6478c47f.js",
       "static/chunks/525-e6aa8800b4d763ef.js",
-      "static/chunks/pages/questions-9a1750762b4006ef.js"
+      "static/chunks/pages/questions-6cf1c99306cf4dcb.js"
     ]
   },
   "ampFirstPages": []
