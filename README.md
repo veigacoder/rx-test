@@ -17,7 +17,20 @@
 git clone https://github.com/veigacoder/rx-test.git
 ```
 
-### Após o cloning acesse o diretório do projeto por um terminal de comandos
+### Após o cloning, acesse o diretório do projeto por um terminal de comandos
 ```
 cd .\rx-test\
 ```
+
+### Monte a imagem Docker
+```
+docker build -t rx-test .
+```
+
+### Execute o container Docker
+```
+docker run -p 3001:3000 rx-test
+```
+
+### Acesse o app em 
+## http://localhost:3001
